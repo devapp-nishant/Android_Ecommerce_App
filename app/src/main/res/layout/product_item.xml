@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="5dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/productItemCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Cat Name"
+            android:textColor="#6A6A6A"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/productItemImg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/discount" />
+
+        <TextView
+            android:id="@+id/productItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Product Name"
+            android:textColor="@color/text_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/productItemDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Dicount"
+            android:textColor="#FE5858"
+            android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/productItemActualPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="price"
+                android:textColor="@color/text_color"
+                android:textSize="14sp"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:id="@+id/productItemDiscoutPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="price"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="end"
+                android:textColor="#4CAF50"
+                android:textSize="18sp"
+                android:layout_marginTop="3dp"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</com.google.android.material.card.MaterialCardView>

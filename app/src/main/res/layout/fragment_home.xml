@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    tools:context=".Fragments.HomeFragment">
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/catProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:trackColor="#F8BC24"
+        app:indicatorColor="#1F69A7"
+        android:indeterminate="true"
+        android:layout_marginTop="2dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:src="@drawable/sale_30"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Shop by Categories"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="20sp"
+        android:textColor="@color/text_color"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homeFragCategoriesRec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Newest Collection"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="20sp"
+        android:textColor="@color/text_color"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/newestProductRec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="For You"
+        android:textSize="20sp"
+        android:textColor="@color/text_color"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/forYouProductRec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

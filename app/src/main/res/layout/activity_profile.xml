@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    tools:context=".Activities.ProfileActivity">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/profileCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp">
+
+           <ScrollView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:padding="8dp"
+                   android:orientation="vertical">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Name:"
+                           android:fontFamily="@font/roboto_medium"
+                           android:textSize="16sp"
+                           android:textColor="#004781"/>
+
+                       <TextView
+                           android:id="@+id/txtCusName"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textColor="@color/text_color"
+                           android:text="Your Name"
+                           android:textSize="18sp"
+                           android:layout_marginTop="5dp"
+                           android:fontFamily="@font/roboto_medium"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Phone:"
+                           android:layout_marginTop="8dp"
+                           android:fontFamily="@font/roboto_medium"
+                           android:textSize="16sp"
+                           android:textColor="#004781"/>
+
+                       <TextView
+                           android:id="@+id/txtCusPhone"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textColor="@color/text_color"
+                           android:text="Your Phone"
+                           android:textSize="18sp"
+                           android:layout_marginTop="5dp"
+                           android:fontFamily="@font/roboto_medium"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Email:"
+                           android:layout_marginTop="8dp"
+                           android:fontFamily="@font/roboto_medium"
+                           android:textSize="16sp"
+                           android:textColor="#004781"/>
+
+                       <TextView
+                           android:id="@+id/txtCusEmail"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textColor="@color/text_color"
+                           android:text="Your Email"
+                           android:textSize="18sp"
+                           android:layout_marginTop="5dp"
+                           android:fontFamily="@font/roboto_medium"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Address:"
+                           android:layout_marginTop="8dp"
+                           android:fontFamily="@font/roboto_medium"
+                           android:textSize="16sp"
+                           android:textColor="#004781"/>
+
+                       <TextView
+                           android:id="@+id/txtCusAddress"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textColor="@color/text_color"
+                           android:text="Your Phone"
+                           android:textSize="18sp"
+                           android:layout_marginTop="5dp"
+                           android:fontFamily="@font/roboto_medium"/>
+
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+           </ScrollView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

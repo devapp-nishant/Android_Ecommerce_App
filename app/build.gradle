@@ -1,0 +1,85 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    namespace 'com.hdddekho.thirty.percent.customer'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.hdddekho.thirty.percent.customer"
+        minSdk 23
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    def nav_version = "2.5.3"
+    //noinspection GradleDependency
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    //noinspection GradleDependency
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // Lottie
+    implementation 'com.airbnb.android:lottie:6.1.0'
+
+    // sdp
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    // Dexter
+    implementation 'com.karumi:dexter:6.2.3'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1'
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+
+    // Circular Image View
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // Firebase
+    implementation platform('com.google.firebase:firebase-bom:32.2.2')
+    implementation 'com.google.firebase:firebase-analytics:21.3.0'
+    implementation 'com.google.firebase:firebase-auth:22.1.1'
+    implementation 'com.google.firebase:firebase-messaging:23.2.1'
+    implementation 'com.google.firebase:firebase-crashlytics:18.4.1'
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+
+    // Zoom ImageView
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+    // Country Code Picker
+    implementation 'com.hbb20:ccp:2.5.3'
+
+    // Razorpay
+    implementation 'com.razorpay:checkout:1.6.34'
+
+}
