@@ -250,11 +250,6 @@ public class OTP_Activity extends AppCompatActivity {
         });
     }
 
-    private void startMainActivity() {
-        startActivity(new Intent(OTP_Activity.this, MainActivity.class));
-        finish();
-    }
-
     private void findIds() {
         tvPhone = findViewById(R.id.tvPhone);
         edtOTP1 = findViewById(R.id.edtOTP1);
