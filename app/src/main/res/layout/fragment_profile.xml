@@ -246,45 +246,19 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="8dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="Refund Policy"
-            android:textColor="@color/text_color"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_regular"
-            android:gravity="start"
-            android:text="REFUND WILL BE IN 7 DAYS OF CAPTURE OF PAYMENT"
-            android:textAlignment="textStart"
-            android:textColor="@color/text_color"
-            android:textSize="16sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="8dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="About Us"
-            android:textColor="@color/text_color"
-            android:textSize="18sp" />
-
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/refundCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:layout_marginTop="25dp"
+            android:padding="12dp">
 
             <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="@dimen/_18sdp"
-                android:layout_height="@dimen/_18sdp"
+                android:id="@+id/refView"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
                 android:layout_marginStart="16dp"
-                android:src="@drawable/location"
+                android:src="@drawable/refund"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -292,63 +266,43 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="start"
-                android:layout_marginStart="20dp"
-                android:text="No C/O Ashok, 505, Kadamkuan Brindabankunj, Exh.Road L.I.C Phulwari Patna Br 800001s"
+                android:text="Refund Policy"
                 android:textAlignment="textStart"
                 android:textColor="@color/text_color"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                app:layout_constraintStart_toEndOf="@+id/refView"
                 app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp">
 
             <ImageView
                 android:id="@+id/imageView9"
-                android:layout_width="@dimen/_18sdp"
-                android:layout_height="@dimen/_18sdp"
-                android:layout_marginStart="16dp"
-                android:src="@drawable/telegram"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_regular"
-                android:gravity="start"
-                android:layout_marginStart="20dp"
-                android:text="Contact@Wpthemego.Com"
-                android:textAlignment="textStart"
-                android:textColor="@color/text_color"
-                android:textSize="16sp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/right_arrow"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView9"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contactUsCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:layout_marginTop="25dp"
+            android:padding="12dp">
 
             <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="@dimen/_18sdp"
-                android:layout_height="@dimen/_18sdp"
+                android:id="@+id/contactView"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
                 android:layout_marginStart="16dp"
-                android:src="@drawable/call"
+                android:src="@drawable/contact_us"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -356,47 +310,73 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="start"
-                android:layout_marginStart="20dp"
-                android:text="+91-9031007703"
+                android:text="Contact Us"
                 android:textAlignment="textStart"
                 android:textColor="@color/text_color"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView11"
+                app:layout_constraintStart_toEndOf="@+id/contactView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/right_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView10"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="8dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="Contact Us"
-            android:textColor="@color/text_color"
-            android:textSize="18sp" />
-
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/aboutUsCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="3dp"
-            android:fontFamily="@font/roboto_regular"
-            android:text="In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at:"
-            android:textAlignment="textStart"
-            android:textSize="16sp" />
+            android:layout_marginTop="25dp"
+            android:padding="12dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/roboto_medium"
-            android:text="@string/contact_us"
-            android:textColor="#4D4D4D"
-            android:textSize="14sp" />
+            <ImageView
+                android:id="@+id/aboutView"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/about_us"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="start"
+                android:text="About Us"
+                android:textAlignment="textStart"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView10"
+                app:layout_constraintStart_toEndOf="@+id/aboutView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/right_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

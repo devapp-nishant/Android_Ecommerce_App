@@ -15,10 +15,13 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import com.hdddekho.thirty.percent.customer.API.ApiClient;
+import com.hdddekho.thirty.percent.customer.Activities.AboutUsActivity;
+import com.hdddekho.thirty.percent.customer.Activities.ContactUsActivity;
 import com.hdddekho.thirty.percent.customer.Activities.MyOrdersActivity;
 import com.hdddekho.thirty.percent.customer.Activities.MyWishlistActivity;
 import com.hdddekho.thirty.percent.customer.Activities.Privacy_Policy_Activity;
 import com.hdddekho.thirty.percent.customer.Activities.ProfileActivity;
+import com.hdddekho.thirty.percent.customer.Activities.Refund_Policy_Activity;
 import com.hdddekho.thirty.percent.customer.Activities.Terms_Condition_Activity;
 import com.hdddekho.thirty.percent.customer.Models.CustomerModel;
 import com.hdddekho.thirty.percent.customer.R;
@@ -37,7 +40,7 @@ public class ProfileFragment extends Fragment {
     private TextView txtName;
     private String Customer_ID, customerName;
     private List<CustomerModel> customerList;
-    private ConstraintLayout personalInfoCard, wishlistCard, ordersCard, termsCard, privacyCard;
+    private ConstraintLayout personalInfoCard, wishlistCard, ordersCard, termsCard, privacyCard, contactUsCard, aboutUsCard, refundCard;
     SharedPreferences customerPref;
     SharedPreferences.Editor customerEditor;
 
@@ -58,7 +61,7 @@ public class ProfileFragment extends Fragment {
 
         personalInfoCard.setOnClickListener(view -> {
             Intent profileIntent = new Intent(getContext(), ProfileActivity.class);
-            profileIntent.putExtra("customerId",Customer_ID);
+            profileIntent.putExtra("customerId", Customer_ID);
             startActivity(profileIntent);
         });
 
@@ -78,6 +81,17 @@ public class ProfileFragment extends Fragment {
             startActivity(new Intent(getContext(), Privacy_Policy_Activity.class));
         });
 
+        contactUsCard.setOnClickListener(view -> {
+            startActivity(new Intent(getContext(), ContactUsActivity.class));
+        });
+
+        aboutUsCard.setOnClickListener(view -> {
+            startActivity(new Intent(getContext(), AboutUsActivity.class));
+        });
+
+        refundCard.setOnClickListener(view -> {
+            startActivity(new Intent(getContext(), Refund_Policy_Activity.class));
+        });
 
         return profileFragment;
     }
@@ -87,7 +101,10 @@ public class ProfileFragment extends Fragment {
         termsCard = profileFragment.findViewById(R.id.termsCard);
         ordersCard = profileFragment.findViewById(R.id.ordersCard);
         privacyCard = profileFragment.findViewById(R.id.privacyCard);
+        aboutUsCard = profileFragment.findViewById(R.id.aboutUsCard);
+        refundCard = profileFragment.findViewById(R.id.refundCard);
         wishlistCard = profileFragment.findViewById(R.id.wishlistCard);
+        contactUsCard = profileFragment.findViewById(R.id.contactUsCard);
         personalInfoCard = profileFragment.findViewById(R.id.personalInfoCard);
     }
 
