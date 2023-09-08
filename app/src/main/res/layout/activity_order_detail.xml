@@ -206,6 +206,7 @@
                 android:textSize="18sp" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cancel_order_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cancel Order"
@@ -216,6 +217,19 @@
                 android:layout_marginVertical="10dp"
                 android:background="@drawable/cancle_order_btn_bg"
                 android:padding="15dp"/>
+
+            <TextView
+                android:id="@+id/cancelledText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@drawable/stroke_btn_bg"
+                android:textSize="18sp"
+                android:textColor="@color/text_color"
+                android:text="Cancelled"
+                android:layout_marginTop="20dp"
+                android:padding="8dp"
+                android:gravity="center"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

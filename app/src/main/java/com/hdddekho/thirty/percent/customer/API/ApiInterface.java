@@ -115,4 +115,12 @@ public interface ApiInterface {
     @GET("fetch_orders.php")
     Call<OrderResponse> fetchOrders();
 
+    @Multipart
+    @POST("cancel_order.php")
+    Call<SuccessResponse> cancelOrder(
+            @Part("order_id") RequestBody orderId,
+            @Part("order_status") RequestBody orderStatus
+    );
+
+
 }
