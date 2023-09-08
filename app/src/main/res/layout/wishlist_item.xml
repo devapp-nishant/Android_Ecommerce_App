@@ -47,6 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
+                android:layout_marginVertical="5dp"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
@@ -60,7 +61,6 @@
                     android:text="Price"
                     android:textColor="@color/text_color"
                     android:textSize="16sp" />
-
 
                 <TextView
                     android:id="@+id/wishItemDiscount"
