@@ -2,9 +2,9 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:fillViewport="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".Activities.OrderDetailActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -30,9 +30,9 @@
             android:id="@+id/detailOrderProgress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
             android:indeterminate="true"
             app:indicatorColor="#1F69A7"
-            android:layout_marginTop="3dp"
             app:trackColor="#F8BC24" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -92,10 +92,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="start"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Product Detail"
-                android:layout_gravity="start"
                 android:textColor="#1F69A7"
                 android:textSize="20sp" />
 
@@ -121,8 +121,8 @@
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="8dp"
+                android:orientation="horizontal"
                 android:weightSum="2">
 
                 <TextView
@@ -205,7 +205,17 @@
                 android:textColor="@color/text_color"
                 android:textSize="18sp" />
 
-
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel Order"
+                android:textAllCaps="false"
+                android:layout_gravity="end"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/cancle_order_btn_bg"
+                android:padding="15dp"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
