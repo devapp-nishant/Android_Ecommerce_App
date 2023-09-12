@@ -29,7 +29,7 @@
             android:fontFamily="@font/roboto_regular"
             android:text="In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at:"
             android:textAlignment="textStart"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
