@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="3dp"
             android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/text_color"
             android:text="In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at:"
             android:textAlignment="textStart"
             android:textSize="18sp" />
