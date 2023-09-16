@@ -3,7 +3,6 @@ package com.hdddekho.thirty.percent.customer.Utils;
 import java.util.Random;
 
 public class OrderNumber {
-
     private final String LETTERS = "abcdefghijklmnopqrstuvwxyz";
     private final String NUMBERS = "0123456789";
     private final char[] ALPHA_NUMBER = (LETTERS+LETTERS.toUpperCase()+NUMBERS).toCharArray();
