@@ -132,8 +132,6 @@ public class SignUpActivity extends AppCompatActivity {
                                     if (zipCode!= null)
                                         edtSignUpPin.setText(zipCode);
 
-
-
                                 }
                             }
 
