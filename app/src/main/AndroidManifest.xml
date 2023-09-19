@@ -80,7 +80,7 @@
 
         <meta-data
             android:name="com.razorpay.ApiKey"
-            android:value="rzp_test_oJsCpxnKFwM6gC" />
+            android:value="rzp_live_XWGsQPKLgk48wS" />
     </application>
 
 </manifest>

@@ -30,6 +30,7 @@ import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.hdddekho.thirty.percent.customer.API.ApiClient;
 import com.hdddekho.thirty.percent.customer.Activities.MainActivity;
+import com.hdddekho.thirty.percent.customer.Activities.MyWishlistActivity;
 import com.hdddekho.thirty.percent.customer.Activities.PlaceOrderActivity;
 import com.hdddekho.thirty.percent.customer.Activities.ProductDetailActivity;
 import com.hdddekho.thirty.percent.customer.Activities.SignUpActivity;
@@ -76,6 +77,7 @@ public class CartFragment extends Fragment implements PaymentResultListener {
     private String Customer_ID, customerAddress,TotalPrice,customerEmail, customerPhone, ORDER_NUMBER, orderStatus, deliveryStatus;
     private AppCompatButton cartOrderBtn;
     private Dialog paymentDialog;
+    private boolean isTotalCalculated = false;
     SharedPreferences customerPref;
     SharedPreferences.Editor customerEditor;
 
@@ -104,6 +106,8 @@ public class CartFragment extends Fragment implements PaymentResultListener {
         showSignUpDialog();
         fetchMyCart();
         paymentDialogDisplay();
+
+
 
         cartOrderBtn.setOnClickListener(view -> {
             if (!isAddressAvailable)
@@ -143,7 +147,9 @@ public class CartFragment extends Fragment implements PaymentResultListener {
         Checkout checkout = new Checkout();
         JSONObject json = new JSONObject();
 
-            for (i = 0; i < cartList.size(); i++) {
+
+        if (!isTotalCalculated) {
+            for (int i = 0; i < cartList.size(); i++) {
                 String pQuantity = cartList.get(i).getQuantity();
                 String pActualPrice = cartList.get(i).getMrp();
                 int priceAfterQuantity = Integer.parseInt(pActualPrice) * Integer.parseInt(pQuantity);
@@ -153,6 +159,21 @@ public class CartFragment extends Fragment implements PaymentResultListener {
 
                 subtotal += productSubtotal;
             }
+
+            // Set the flag to true to indicate that the total has been calculated
+            isTotalCalculated = true;
+        }
+
+//            for (i = 0; i < cartList.size(); i++) {
+//                String pQuantity = cartList.get(i).getQuantity();
+//                String pActualPrice = cartList.get(i).getMrp();
+//                int priceAfterQuantity = Integer.parseInt(pActualPrice) * Integer.parseInt(pQuantity);
+//
+//                // Calculate the subtotal price for the current product with quantity and discount
+//                double productSubtotal = priceAfterQuantity * 0.7; // 30% discount
+//
+//                subtotal += productSubtotal;
+//            }
 
 
         try {
@@ -174,6 +195,7 @@ public class CartFragment extends Fragment implements PaymentResultListener {
 
         }catch (Exception e){
             Toast.makeText(getActivity(), "Error: "+e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getContext(), MyWishlistActivity.class));
         }
 
     }
@@ -285,6 +307,7 @@ public class CartFragment extends Fragment implements PaymentResultListener {
                         @Override
                         public void onFailure(Call<SuccessResponse> call, Throwable t) {
                             Toast.makeText(getContext(), "Something went wrong!\n" + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+
                         }
                     });
 

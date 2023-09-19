@@ -1,9 +1,12 @@
 package com.hdddekho.thirty.percent.customer.Activities;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,6 +42,7 @@ public class OrderDetailActivity extends AppCompatActivity {
     private TextView cancelledText, tvOrderDate, tvOrderNum, tvTransactionNum, tvProductName, tvPaymentMode, tvMRP, tvDiscount, tvQuantity, tvTotalAmount;
     private List<OrderModel> orderList;
     private AppCompatButton cancel_order_btn;
+    private Dialog refundDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,21 +58,35 @@ public class OrderDetailActivity extends AppCompatActivity {
         orderList = new ArrayList<>();
 
         fetchMyOrder();
-
+        refundDialogDisplay();
 
 
         cancel_order_btn.setOnClickListener(view -> {
             if (Objects.equals(transactionId, "NIL")) {
                 CancelOrder();
             } else {
-                RefundMoney();
+                CancelOrder();
+                refundDialog.show();
             }
         });
 
 
     }
 
-    private void RefundMoney() {
+    @SuppressLint("UseCompatLoadingForDrawables")
+    private void refundDialogDisplay() {
+        refundDialog = new Dialog(OrderDetailActivity.this);
+        refundDialog.setContentView(R.layout.refund_payment_dailog);
+        refundDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        refundDialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.login_alert_bg));
+        refundDialog.setCancelable(false);
+
+        AppCompatButton okRefundBtn = refundDialog.findViewById(R.id.okRefundBtn);
+
+        okRefundBtn.setOnClickListener(view -> {
+            refundDialog.dismiss();
+        });
+
     }
 
     private void CancelOrder() {
