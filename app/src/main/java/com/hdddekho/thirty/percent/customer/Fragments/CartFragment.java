@@ -147,7 +147,6 @@ public class CartFragment extends Fragment implements PaymentResultListener {
         Checkout checkout = new Checkout();
         JSONObject json = new JSONObject();
 
-
         if (!isTotalCalculated) {
             for (int i = 0; i < cartList.size(); i++) {
                 String pQuantity = cartList.get(i).getQuantity();
@@ -164,16 +163,6 @@ public class CartFragment extends Fragment implements PaymentResultListener {
             isTotalCalculated = true;
         }
 
-//            for (i = 0; i < cartList.size(); i++) {
-//                String pQuantity = cartList.get(i).getQuantity();
-//                String pActualPrice = cartList.get(i).getMrp();
-//                int priceAfterQuantity = Integer.parseInt(pActualPrice) * Integer.parseInt(pQuantity);
-//
-//                // Calculate the subtotal price for the current product with quantity and discount
-//                double productSubtotal = priceAfterQuantity * 0.7; // 30% discount
-//
-//                subtotal += productSubtotal;
-//            }
 
 
         try {
